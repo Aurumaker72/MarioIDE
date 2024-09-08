@@ -175,7 +175,7 @@ public class TimelineViewModel : GlDocumentViewModel, IProject, ICommandHandler<
                     ImGui.TableSetColumnIndex(0);
 
                     bool sel = row >= Math.Min(SelectionStart, SelectionEnd) && row <= Math.Max(SelectionStart, SelectionEnd);
-                    ImGui.Selectable("##select_" + row, ref sel, ImGuiSelectableFlags.SpanAllColumns | ImGuiSelectableFlags.AllowOverlap, new Vector2(0, 22));
+                    ImGui.Selectable("##select_" + row, ref sel, ImGuiSelectableFlags.SpanAllColumns | ImGuiSelectableFlags.AllowItemOverlap, new Vector2(0, 22));
 
                     if (ImGui.IsItemClicked(ImGuiMouseButton.Left) && ImGui.IsItemHovered(ImGuiHoveredFlags.RectOnly))
                     {

@@ -333,7 +333,7 @@ void main()
         GL.BindBuffer(BufferTarget.ArrayBuffer, _vertexBuffer);
         for (int i = 0; i < drawData.CmdListsCount; i++)
         {
-            ImDrawListPtr cmdList = drawData.CmdLists[i];
+            ImDrawListPtr cmdList = drawData.CmdListsRange[i];
 
             int vertexSize = cmdList.VtxBuffer.Size * Marshal.SizeOf<ImDrawVert>();
             if (vertexSize > _vertexBufferSize)
@@ -381,7 +381,7 @@ void main()
         // Render command lists
         for (int n = 0; n < drawData.CmdListsCount; n++)
         {
-            ImDrawListPtr cmdList = drawData.CmdLists[n];
+            ImDrawListPtr cmdList = drawData.CmdListsRange[n];
 
             GL.BufferSubData(BufferTarget.ArrayBuffer, IntPtr.Zero, cmdList.VtxBuffer.Size * Marshal.SizeOf<ImDrawVert>(), cmdList.VtxBuffer.Data);
             GL.BufferSubData(BufferTarget.ElementArrayBuffer, IntPtr.Zero, cmdList.IdxBuffer.Size * sizeof(ushort), cmdList.IdxBuffer.Data);
