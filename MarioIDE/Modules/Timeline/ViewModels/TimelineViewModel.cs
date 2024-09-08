@@ -23,6 +23,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MarioIDE.Core.Framework;
 using Button = MarioSharp.Structs.Input.Button;
 using InputManager = MarioIDE.Logic.InputManager;
 using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
@@ -100,7 +101,7 @@ public class TimelineViewModel : GlDocumentViewModel, IProject, ICommandHandler<
         SelectionStart = selectionStart;
         SelectionEnd = selectionEnd;
     }
-
+    
     private void DrawTimeline()
     {
         IPlaybackController playbackController = IoC.Get<IPlaybackController>();
@@ -121,7 +122,7 @@ public class TimelineViewModel : GlDocumentViewModel, IProject, ICommandHandler<
             _scrollToFrame = -1;
         }
 
-        if (ImGui.BeginTable("Inputs", 16, flags, size)) // 31
+        if (ImGui.BeginTable("Inputs", 23, flags, size)) // 31
         {
             ImGui.TableSetupScrollFreeze(0, 1); // Make top row always visible
             ImGui.TableSetupColumn("Frame", ImGuiTableColumnFlags.WidthFixed | ImGuiTableColumnFlags.NoHide | ImGuiTableColumnFlags.NoReorder, 80);
@@ -139,7 +140,14 @@ public class TimelineViewModel : GlDocumentViewModel, IProject, ICommandHandler<
             ImGui.TableSetupColumn("Level");
             ImGui.TableSetupColumn("Action");
             ImGui.TableSetupColumn("HSpeed");
+            ImGui.TableSetupColumn("YSpeed");
             ImGui.TableSetupColumn("HSlidingSpeed");
+            ImGui.TableSetupColumn("FacingYaw");
+            ImGui.TableSetupColumn("IntendedYaw");
+            ImGui.TableSetupColumn("RngValue");
+            ImGui.TableSetupColumn("X");
+            ImGui.TableSetupColumn("Y");
+            ImGui.TableSetupColumn("Z");
 
             ImGui.TableHeadersRow();
 
@@ -232,7 +240,6 @@ public class TimelineViewModel : GlDocumentViewModel, IProject, ICommandHandler<
                     DrawCheckboxForButton(ref input, Button.R, row);
 
                     ImGui.TableSetColumnIndex(12);
-
                     ImGui.Text(Maps.GetBestMap(frameData.Level, frameData.Area));
 
                     ImGui.TableSetColumnIndex(13);
@@ -242,7 +249,28 @@ public class TimelineViewModel : GlDocumentViewModel, IProject, ICommandHandler<
                     ImGui.Text(frameData.HSpeed.ToString(CultureInfo.InvariantCulture));
 
                     ImGui.TableSetColumnIndex(15);
+                    ImGui.Text(frameData.YSpeed.ToString(CultureInfo.InvariantCulture));
+
+                    ImGui.TableSetColumnIndex(16);
                     ImGui.Text(frameData.HSlidingSpeed.ToString(CultureInfo.InvariantCulture));
+                    
+                    ImGui.TableSetColumnIndex(17);  
+                    ImGui.Text(frameData.FaceAngle.Y.ToString());
+                    
+                    ImGui.TableSetColumnIndex(18);
+                    ImGui.Text(frameData.IntendedYaw.ToString(CultureInfo.InvariantCulture));
+                    
+                    ImGui.TableSetColumnIndex(19);
+                    ImGui.Text("?");
+                    
+                    ImGui.TableSetColumnIndex(20);
+                    ImGui.Text(frameData.X.ToString(CultureInfo.InvariantCulture));
+                    
+                    ImGui.TableSetColumnIndex(21);
+                    ImGui.Text(frameData.Y.ToString(CultureInfo.InvariantCulture));
+                    
+                    ImGui.TableSetColumnIndex(22);
+                    ImGui.Text(frameData.Z.ToString(CultureInfo.InvariantCulture));
 
                     SaveSystem.InputManager.SetFrameInput(row, input);
                 }

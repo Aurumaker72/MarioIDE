@@ -298,16 +298,33 @@ internal class SaveSystem : ISaveSystem, IDisposable
             area = GameInstance.Read<byte>(GameInstance.Memory.GMarioStates.areaPointer);
         }
 
+        float spdEfficiency = -1.0f;
+        
+        var prevIndex = GameInstance.Frame - 1;
+
+        if (prevIndex > 0)
+        {
+            // TODO: Implement this without sacrificing perf
+            spdEfficiency = GameInstance.Memory.GMarioStates.GetSpeedEfficiency(0, 0);
+        }
+        
         SetFrameData(GameInstance.Frame, new FrameData
         {
             Level = level,
             Area = area,
             Action = GameInstance.Memory.GMarioStates.action,
             HSpeed = GameInstance.Memory.GMarioStates.forwardVel,
+            YSpeed = GameInstance.Memory.GMarioStates.vel.Y,
             HSlidingSpeed = GameInstance.Memory.GMarioStates.GetHorizontalSlidingSpeed(),
             MarioPos = GameInstance.Memory.GMarioStates.pos,
             CameraYaw = GameInstance.Memory.GetCameraYaw(),
-            FaceAngle = GameInstance.Memory.GMarioStates.faceAngle
+            FaceAngle = GameInstance.Memory.GMarioStates.faceAngle,
+            IntendedYaw = GameInstance.Memory.GMarioStates.intendedYaw,
+            RngValue = 0,
+            SpdEfficiency = spdEfficiency,
+            X = GameInstance.Memory.GMarioStates.pos.X,
+            Y = GameInstance.Memory.GMarioStates.pos.Y,
+            Z = GameInstance.Memory.GMarioStates.pos.Z,
         });
     }
 

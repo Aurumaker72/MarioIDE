@@ -21,6 +21,9 @@ public class GameMemory
         set => _gameInstance.Write("gGlobalTimer", value);
     }
 
+    // Whatever
+    // public ushort GRandomSeed16 => _gameInstance.Read<ushort>("gRandomSeed16");
+    
     public int GSurfacesAllocated
     {
         get => _gameInstance.Read<int>("gSurfacesAllocated");

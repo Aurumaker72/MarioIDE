@@ -74,4 +74,12 @@ public struct MarioState
         double z = System.Math.Pow(slideVelZ, 2);
         return (float)System.Math.Sqrt(x + z);
     }
+
+    public float GetSpeedEfficiency(float lastX, float lastZ)
+    {
+        var distanceMoved = System.Math.Sqrt(
+            System.Math.Pow(lastX - pos.X, 2) + System.Math.Pow(lastZ - pos.Z, 2));
+
+        return (float)distanceMoved / GetHorizontalSlidingSpeed();
+    }
 }
