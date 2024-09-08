@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarioIDE", "MarioIDE\MarioIDE.csproj", "{3EA4FB98-ABD2-4FC3-A9F0-4BB04F6FDCB1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini", "Gemini\Gemini.csproj", "{AB6FE187-243E-45C3-901C-A4F5A3AE07F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarioSharp", "MarioSharp\MarioSharp.csproj", "{9263D4D9-F388-475F-B1B2-EDBEB69BA916}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarioIDE.Core", "MarioIDE.Core\MarioIDE.Core.csproj", "{A01C930A-E33B-489D-8166-22C3E96416BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarioIDE.Mupen", "MarioIDE.Mupen\MarioIDE.Mupen.csproj", "{39430866-BB4F-4E3B-A617-305E28DB8B12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EA4FB98-ABD2-4FC3-A9F0-4BB04F6FDCB1}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{3EA4FB98-ABD2-4FC3-A9F0-4BB04F6FDCB1}.Debug|Any CPU.Build.0 = Debug|x64
+		{3EA4FB98-ABD2-4FC3-A9F0-4BB04F6FDCB1}.Debug|x64.ActiveCfg = Debug|x64
+		{3EA4FB98-ABD2-4FC3-A9F0-4BB04F6FDCB1}.Debug|x64.Build.0 = Debug|x64
+		{3EA4FB98-ABD2-4FC3-A9F0-4BB04F6FDCB1}.Release|Any CPU.ActiveCfg = Release|x64
+		{3EA4FB98-ABD2-4FC3-A9F0-4BB04F6FDCB1}.Release|Any CPU.Build.0 = Release|x64
+		{3EA4FB98-ABD2-4FC3-A9F0-4BB04F6FDCB1}.Release|x64.ActiveCfg = Release|x64
+		{3EA4FB98-ABD2-4FC3-A9F0-4BB04F6FDCB1}.Release|x64.Build.0 = Release|x64
+		{AB6FE187-243E-45C3-901C-A4F5A3AE07F8}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{AB6FE187-243E-45C3-901C-A4F5A3AE07F8}.Debug|Any CPU.Build.0 = Debug|x64
+		{AB6FE187-243E-45C3-901C-A4F5A3AE07F8}.Debug|x64.ActiveCfg = Debug|x64
+		{AB6FE187-243E-45C3-901C-A4F5A3AE07F8}.Debug|x64.Build.0 = Debug|x64
+		{AB6FE187-243E-45C3-901C-A4F5A3AE07F8}.Release|Any CPU.ActiveCfg = Release|x64
+		{AB6FE187-243E-45C3-901C-A4F5A3AE07F8}.Release|Any CPU.Build.0 = Release|x64
+		{AB6FE187-243E-45C3-901C-A4F5A3AE07F8}.Release|x64.ActiveCfg = Release|x64
+		{AB6FE187-243E-45C3-901C-A4F5A3AE07F8}.Release|x64.Build.0 = Release|x64
+		{9263D4D9-F388-475F-B1B2-EDBEB69BA916}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{9263D4D9-F388-475F-B1B2-EDBEB69BA916}.Debug|Any CPU.Build.0 = Debug|x64
+		{9263D4D9-F388-475F-B1B2-EDBEB69BA916}.Debug|x64.ActiveCfg = Debug|x64
+		{9263D4D9-F388-475F-B1B2-EDBEB69BA916}.Debug|x64.Build.0 = Debug|x64
+		{9263D4D9-F388-475F-B1B2-EDBEB69BA916}.Release|Any CPU.ActiveCfg = Release|x64
+		{9263D4D9-F388-475F-B1B2-EDBEB69BA916}.Release|Any CPU.Build.0 = Release|x64
+		{9263D4D9-F388-475F-B1B2-EDBEB69BA916}.Release|x64.ActiveCfg = Release|x64
+		{9263D4D9-F388-475F-B1B2-EDBEB69BA916}.Release|x64.Build.0 = Release|x64
+		{A01C930A-E33B-489D-8166-22C3E96416BF}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{A01C930A-E33B-489D-8166-22C3E96416BF}.Debug|Any CPU.Build.0 = Debug|x64
+		{A01C930A-E33B-489D-8166-22C3E96416BF}.Debug|x64.ActiveCfg = Debug|x64
+		{A01C930A-E33B-489D-8166-22C3E96416BF}.Debug|x64.Build.0 = Debug|x64
+		{A01C930A-E33B-489D-8166-22C3E96416BF}.Release|Any CPU.ActiveCfg = Release|x64
+		{A01C930A-E33B-489D-8166-22C3E96416BF}.Release|Any CPU.Build.0 = Release|x64
+		{A01C930A-E33B-489D-8166-22C3E96416BF}.Release|x64.ActiveCfg = Release|x64
+		{39430866-BB4F-4E3B-A617-305E28DB8B12}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{39430866-BB4F-4E3B-A617-305E28DB8B12}.Debug|Any CPU.Build.0 = Debug|x64
+		{39430866-BB4F-4E3B-A617-305E28DB8B12}.Debug|x64.ActiveCfg = Debug|x64
+		{39430866-BB4F-4E3B-A617-305E28DB8B12}.Debug|x64.Build.0 = Debug|x64
+		{39430866-BB4F-4E3B-A617-305E28DB8B12}.Release|Any CPU.ActiveCfg = Release|x64
+		{39430866-BB4F-4E3B-A617-305E28DB8B12}.Release|Any CPU.Build.0 = Release|x64
+		{39430866-BB4F-4E3B-A617-305E28DB8B12}.Release|x64.ActiveCfg = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B990701-7C56-4589-880C-959636E58BD4}
+	EndGlobalSection
+EndGlobal

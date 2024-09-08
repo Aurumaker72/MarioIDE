@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MarioIDE": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    }
+  }
+}
