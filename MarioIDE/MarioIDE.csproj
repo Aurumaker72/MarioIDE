@@ -27,6 +27,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="ImGui.NET" Version="1.89.9.3" />
     <PackageReference Include="OpenTK" Version="3.3.3" />
     <PackageReference Include="OpenTK.Windowing.Common" Version="4.7.7" />
     <PackageReference Include="OpenTK.Windowing.Desktop" Version="4.7.7" />
@@ -43,12 +44,6 @@
     <ProjectReference Include="..\MarioSharp\MarioSharp.csproj">
       <Private></Private>
     </ProjectReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="ImGui.NET">
-      <HintPath>..\ImGui.NET.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>
